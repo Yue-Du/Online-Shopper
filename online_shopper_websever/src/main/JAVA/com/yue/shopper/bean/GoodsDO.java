@@ -6,11 +6,9 @@ public class GoodsDO {
     String name;
     String description;
     float price;
-    long stocknumber;
+    int stocknumber;
     String picture;
-    long createdate;
-    long updatedate;
-    boolean delete;
+    short delete;
 
     public long getId() {
         return id;
@@ -52,11 +50,11 @@ public class GoodsDO {
         this.price = price;
     }
 
-    public long getStocknumber() {
+    public int getStocknumber() {
         return stocknumber;
     }
 
-    public void setStocknumber(long stocknumber) {
+    public void setStocknumber(int stocknumber) {
         this.stocknumber = stocknumber;
     }
 
@@ -68,27 +66,11 @@ public class GoodsDO {
         this.picture = picture;
     }
 
-    public long getCreatedate() {
-        return createdate;
-    }
-
-    public void setCreatedate(long createdate) {
-        this.createdate = createdate;
-    }
-
-    public long getUpdatedate() {
-        return updatedate;
-    }
-
-    public void setUpdatedate(long updatedate) {
-        this.updatedate = updatedate;
-    }
-
-    public boolean isDelete() {
+    public short getDelete() {
         return delete;
     }
 
-    public void setDelete(boolean delete) {
+    public void setDelete(short delete) {
         this.delete = delete;
     }
 }

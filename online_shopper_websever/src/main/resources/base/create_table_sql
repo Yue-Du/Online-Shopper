@@ -1,0 +1,18 @@
+CREATE TABLE `store_info` (
+  `id` bigint NOT NULL AUTO_INCREMENT COMMENT 'ID,auto increase',
+  `name` varchar(20) NOT NULL COMMENT 'Name of store',
+  `delete` tinyint NOT NULL COMMENT 'delete:1, not delete:0',
+  PRIMARY KEY (`id`)
+)
+
+CREATE TABLE `goods_info` (
+  `id` bigint NOT NULL AUTO_INCREMENT COMMENT 'ID,auto increase',
+  `storeId` bigint NOT NULL COMMENT 'storeId',
+  `name` varchar(30) NOT NULL COMMENT 'Name of goods',
+  `description` varchar(100) NOT NULL COMMENT 'description of goods',
+  `price` float NOT NULL COMMENT 'price of goods',
+  `stocknumber` int NOT NULL COMMENT 'stocknumber',
+  `picture` varchar(100) NOT NULL COMMENT 'description of goods',
+  `delete` tinyint NOT NULL COMMENT 'delete:1, not delete:0',
+  PRIMARY KEY (`id`)
+)

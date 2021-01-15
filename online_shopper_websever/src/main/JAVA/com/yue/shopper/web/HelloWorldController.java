@@ -1,16 +1,22 @@
 package com.yue.shopper.web;
 
 import com.yue.shopper.bean.GoodsBO;
+import com.yue.shopper.bean.GoodsDO;
+import com.yue.shopper.mapper.GoodsInfoMapper;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.List;
 
 @Controller
 @RequestMapping("/test")
 public class HelloWorldController {
+
+    @Resource
+    GoodsInfoMapper goodsInfoMapper;
 
     @RequestMapping("/one")
     @ResponseBody
@@ -53,5 +59,11 @@ public class HelloWorldController {
         ret.add(goodsBO3);
         ret.add(goodsBO4);
         return ret;
+    }
+
+    @RequestMapping("/three")
+    @ResponseBody
+    public List<GoodsDO> testThree() {
+        return goodsInfoMapper.getGoodsDoByBatch(0, 10);
     }
 }

@@ -14,7 +14,7 @@ http://www.springframework.org/schema/tx ">
             <value>com.mysql.jdbc.Driver</value>
         </property>
         <property name="url">
-            <value>jdbc:mysql://localhost:3306/first_database?characterEncoding=utf-8</value>
+            <value>jdbc:mysql://localhost:3306/online_shopper?characterEncoding=utf-8</value>
         </property>
         <property name="username">
             <value>root</value>
@@ -39,7 +39,7 @@ http://www.springframework.org/schema/tx ">
     <!--动态代理实现 不用写dao的实现 -->
     <bean id="MapperScannerConfigurer" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
         <!-- 这里的basePackage 指定了dao层接口路劲，这里的dao接口不用自己实现 -->
-        <property name="basePackage" value="com.yue.first.mapper"/>
+        <property name="basePackage" value="com.yue.shopper.mapper"/>
         <!-- 如果只有一个数据源的话可以不用指定，但是如果有多个数据源的话必须要指定 -->
         <!-- <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory" /> -->
         <!--直接指定了sqlsessionTemplate名称，这个和上面的其实是一样的 -->

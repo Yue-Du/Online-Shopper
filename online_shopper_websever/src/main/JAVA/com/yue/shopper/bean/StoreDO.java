@@ -3,9 +3,7 @@ package com.yue.shopper.bean;
 public class StoreDO {
     long id;
     String name;
-    long createdate;
-    long updatedate;
-    boolean delete;
+    short delete;
 
     public long getId() {
         return id;
@@ -23,27 +21,11 @@ public class StoreDO {
         this.name = name;
     }
 
-    public long getCreatedate() {
-        return createdate;
-    }
-
-    public void setCreatedate(long createdate) {
-        this.createdate = createdate;
-    }
-
-    public long getUpdatedate() {
-        return updatedate;
-    }
-
-    public void setUpdatedate(long updatedate) {
-        this.updatedate = updatedate;
-    }
-
-    public boolean isDelete() {
+    public short getDelete() {
         return delete;
     }
 
-    public void setDelete(boolean delete) {
+    public void setDelete(short delete) {
         this.delete = delete;
     }
 }
