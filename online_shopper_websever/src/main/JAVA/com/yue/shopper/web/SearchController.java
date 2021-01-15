@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
+import java.util.ArrayList;
 import java.util.List;
 
 @Controller
@@ -21,6 +22,13 @@ public class SearchController {
     @RequestMapping("/getGoodsByBatch")
     @ResponseBody
     public List<GoodsBO> getGoodsByBatch(@RequestParam("startId") long startId, @RequestParam("size") long size) {
-        return GoodsBO.createGoodsBO(goodsInfoMapper.getGoodsDoByBatch(startId, size));
+        try{
+            return GoodsBO.createGoodsBO(goodsInfoMapper.getGoodsDoByBatch(startId, size));
+
+        }catch(Exception e) {
+            System.out.println(e);
+            //todo  change this to real log
+        }
+        return new ArrayList<>();
     }
 }
