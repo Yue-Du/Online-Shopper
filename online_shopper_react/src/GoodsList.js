@@ -5,7 +5,7 @@ import tablepic from './bed table.png'
 class GoodsList extends Component {
     render() {
 	var request = new XMLHttpRequest();
-	request.open('GET', 'http://localhost:8080/online_shopper_websever_war_exploded/test/two', false);
+	request.open('GET', 'http://localhost:8080/online_shopper_websever_war_exploded/search/getGoodsByBatch?startId=0&size=40', false);
 	request.send(null);
 	var goodsList = [];
 	if (request.status === 200) {
