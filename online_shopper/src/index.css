@@ -30,6 +30,13 @@ body {
 }
 
 .GoodList {
+  height: auto;
+  text-align: left;
+  margin: 1rem 0;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: space-around;
+
   background-color: #fff;
   border: 1px solid #f1f1f1;
   padding: 20px;
@@ -39,7 +46,10 @@ body {
 }
 
 .goods {
-  width: 200px;
+  height: 320px;
+  width: 230px;
+  margin: 10px;
+  border: 1px solid #D4D4D5;
   background-color: #fff;
   display: flex;
   flex-direction: column;
@@ -62,9 +72,6 @@ body {
   font-style: italic;
 }
 
-.comment p {
-  margin: 0;
-}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
