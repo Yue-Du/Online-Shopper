@@ -73,4 +73,18 @@ public class GoodsDO {
     public void setDelete(short delete) {
         this.delete = delete;
     }
+
+    @Override
+    public String toString() {
+        return "GoodsDO{" +
+                "id=" + id +
+                ", storeId=" + storeId +
+                ", name='" + name + '\'' +
+                ", description='" + description + '\'' +
+                ", price=" + price +
+                ", stocknumber=" + stocknumber +
+                ", picture='" + picture + '\'' +
+                ", delete=" + delete +
+                '}';
+    }
 }
